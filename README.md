@@ -1,6 +1,8 @@
 # Contract Note Generation and Delivery Service
 
-A serverless system for generating, digitally signing, and delivering contract notes using Kafka, AWS Lambda/Azure Functions, and cloud-native services.
+A cloud-native serverless system designed for the automated generation, digital signing, and secure delivery of contract notes. Utilizing Apache Kafka for real-time event-driven workflows, the system ensures high availability, cost efficiency, and regulatory compliance.
+
+
 
 ## Features
 
