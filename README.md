@@ -3,10 +3,6 @@
 A cloud-native serverless system designed for the automated generation, digital signing, and secure delivery of contract notes. Utilizing Apache Kafka for real-time event-driven workflows, the system ensures high availability, cost efficiency, and regulatory compliance.
 
 
-#project Structure 
-
-SPARC-Generate-Document/ │ ├── .gradle/ ├── .idea/ ├── .vscode/ ├── build/ ├── gradle/ ├── lib/ ├── output/ ├── src/ │ ├── main/ │ │ ├── java/ │ │ │ ├── com.gtl/ │ │ │ │ ├── config/ │ │ │ │ │ ├── GlobalConfigurationReader.java │ │ │ │ ├── constants/ │ │ │ │ │ ├── ConfigConstants.java │ │ │ │ ├── controller/ │ │ │ │ │ ├── GenerateDocController.java │ │ │ │ │ ├── HealthCheckController.java │ │ │ │ ├── model/ │ │ │ │ │ ├── DocumentRequestContext.java │ │ │ │ │ ├── HtmldocParameters.java │ │ │ │ ├── process/ │ │ │ │ │ ├── PostProcess.java │ │ │ │ │ ├── PreProcess.java │ │ │ │ │ ├── Process.java │ │ │ │ │ ├── ProcessExecuterClient.java │ │ │ │ │ ├── ProcessInitiator.java │ │ │ │ │ ├── ProcessRequest.java │ │ │ │ ├── service/ │ │ │ │ │ ├── DbReqProcessor.java │ │ │ │ │ ├── GenerateDocProcessExecuter.java │ │ │ │ │ ├── HttpServiceRequest.java │ │ │ │ ├── utils/ │ │ │ │ │ ├── Base64Util.java │ │ │ │ │ ├── EmailUtil.java │ │ │ │ │ ├── FileUtils.java │ │ │ │ │ ├── HtmlDocHandler.java │ │ │ │ │ ├── HtmlToPdf.java │ │ │ │ │ ├── HtmlToPDFOptions.java │ │ │ │ │ ├── JSONConverterUtil.java │ │ │ │ │ ├── MarginMailDbService.java │ │ │ │ │ ├── PasswordProtectionUtil.java │ │ │ │ │ ├── PdfProcessUtil.java │ │ │ │ │ ├── SigningUtil.java │ │ │ │ │ ├── SoftPdfSignUtil.java │ │ │ │ ├── SparcGenerateDocumentApplication.java │ │ ├── resources/ │ │ │ ├── application.yml
-
 
 ## Features
 
@@ -87,3 +83,58 @@ mvn spring-boot:run
 - **Technical Support**: 
   - Unnie Varghese Puthengadi
   - Varghese Paul
+ 
+#ProjectStructure
+
+SPARC-Generate-Document/
+│
+├── .gradle/
+├── .idea/
+├── .vscode/
+├── build/
+├── gradle/
+├── lib/
+├── output/
+├── src/
+│   ├── main/
+│   │   ├── java/
+│   │   │   ├── com/
+│   │   │   │   ├── gtl/
+│   │   │   │   │   ├── config/
+│   │   │   │   │   │   ├── GlobalConfigurationReader.java
+│   │   │   │   │   ├── constants/
+│   │   │   │   │   │   ├── ConfigConstants.java
+│   │   │   │   │   ├── controller/
+│   │   │   │   │   │   ├── GenerateDocController.java
+│   │   │   │   │   │   ├── HealthCheckController.java
+│   │   │   │   │   ├── model/
+│   │   │   │   │   │   ├── DocumentRequestContext.java
+│   │   │   │   │   │   ├── HtmldocParameters.java
+│   │   │   │   │   ├── process/
+│   │   │   │   │   │   ├── PostProcess.java
+│   │   │   │   │   │   ├── PreProcess.java
+│   │   │   │   │   │   ├── Process.java
+│   │   │   │   │   │   ├── ProcessExecuterClient.java
+│   │   │   │   │   │   ├── ProcessInitiator.java
+│   │   │   │   │   │   ├── ProcessRequest.java
+│   │   │   │   │   ├── service/
+│   │   │   │   │   │   ├── DbReqProcessor.java
+│   │   │   │   │   │   ├── GenerateDocProcessExecuter.java
+│   │   │   │   │   │   ├── HttpServiceRequest.java
+│   │   │   │   │   ├── utils/
+│   │   │   │   │   │   ├── Base64Util.java
+│   │   │   │   │   │   ├── EmailUtil.java
+│   │   │   │   │   │   ├── FileUtils.java
+│   │   │   │   │   │   ├── HtmlDocHandler.java
+│   │   │   │   │   │   ├── HtmlToPdf.java
+│   │   │   │   │   │   ├── HtmlToPDFOptions.java
+│   │   │   │   │   │   ├── JSONConverterUtil.java
+│   │   │   │   │   │   ├── MarginMailDbService.java
+│   │   │   │   │   │   ├── PasswordProtectionUtil.java
+│   │   │   │   │   │   ├── PdfProcessUtil.java
+│   │   │   │   │   │   ├── SigningUtil.java
+│   │   │   │   │   │   ├── SoftPdfSignUtil.java
+│   │   │   │   │   ├── SparcGenerateDocumentApplication.java
+│   │   ├── resources/
+│   │   │   ├── application.yml
+
