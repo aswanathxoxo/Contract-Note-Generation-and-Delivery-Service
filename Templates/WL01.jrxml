@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd"
+              name="Geojit Welcome Letter"
+              pageWidth="595" pageHeight="842" columnWidth="555"
+              orientation="Portrait" whenNoDataType="AllSectionsNoDetail"
+              leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+
+    <parameter name="CustomerName" class="java.lang.String"/>
+    <parameter name="DpClientID" class="java.lang.String"/>
+    <parameter name="DPID" class="java.lang.String"/>
+    <parameter name="TradeCode" class="java.lang.String"/>
+    <parameter name="TIN" class="java.lang.String"/>
+    <parameter name="RegisteredEmail" class="java.lang.String"/>
+    <parameter name="BranchName" class="java.lang.String"/>
+    <parameter name="BranchCode" class="java.lang.String"/>
+    <parameter name="BranchPhoneNos" class="java.lang.String"/>
+    <parameter name="BranchEmail" class="java.lang.String"/>
+    <parameter name="BranchTimings" class="java.lang.String"/>
+    <parameter name="Mobile" class="java.lang.String"/>
+    <parameter name="Landline" class="java.lang.String"/>
+    <parameter name="TollFree" class="java.lang.String"/>
+    <parameter name="PaidLine" class="java.lang.String"/>
+    <parameter name="CustCareEmail" class="java.lang.String"/>
+
+    <title>
+        <band height="100" splitType="Stretch">
+            <image scaleImage="RetainShape">
+                <reportElement x="0" y="0" width="241" height="82"/>
+                <imageExpression><![CDATA["/Users/aswanathjs/Documents/home/gtlprojects/SPARC-Generate-Document/lib/Templates/GeojitLogo.png"]]></imageExpression>
+            </image>
+            <textField>
+                <reportElement x="0" y="80" width="555" height="20"/>
+                <textFieldExpression><![CDATA["Welcome to Geojit Financial Services Ltd."]]></textFieldExpression>
+            </textField>
+        </band>
+    </title>
+
+    <detail>
+        <band height="600" splitType="Stretch">
+            <!-- Key-Value Pairs in Table-like Structure -->
+            <frame>
+                <reportElement x="0" y="0" width="555" height="600" backcolor="#FFFFFF" mode="Opaque"/>
+
+                <!-- Outline for the frame -->
+                <rectangle>
+                    <reportElement x="0" y="0" width="555" height="600" backcolor="#FFFFFF" forecolor="#000000"/>
+                </rectangle>
+
+                <staticText>
+                    <reportElement x="5" y="0" width="200" height="30" mode="Opaque"/>
+                    <text><![CDATA[Customer Name:]]></text>
+                </staticText>
+                <textField>
+                    <reportElement x="205" y="0" width="350" height="30"/>
+                    <textFieldExpression><![CDATA[$P{CustomerName}]]></textFieldExpression>
+                </textField>
+
+                <line>
+                    <reportElement x="0" y="30" width="555" height="1" forecolor="#000000"/>
+                </line>
+
+                <staticText>
+                    <reportElement x="5" y="40" width="200" height="30" mode="Opaque"/>
+                    <text><![CDATA[Trade Code:]]></text>
+                </staticText>
+                <textField>
+                    <reportElement x="205" y="40" width="350" height="30"/>
+                    <textFieldExpression><![CDATA[$P{TradeCode}]]></textFieldExpression>
+                </textField>
+
+                <line>
+                    <reportElement x="0" y="70" width="555" height="1" forecolor="#000000"/>
+                </line>
+
+                <staticText>
+                    <reportElement x="5" y="80" width="200" height="30" mode="Opaque"/>
+                    <text><![CDATA[DP Client ID:]]></text>
+                </staticText>
+                <textField>
+                    <reportElement x="205" y="80" width="350" height="30"/>
+                    <textFieldExpression><![CDATA[$P{DpClientID}]]></textFieldExpression>
+                </textField>
+
+                <line>
+                    <reportElement x="0" y="110" width="555" height="1" forecolor="#000000"/>
+                </line>
+
+                <staticText>
+                    <reportElement x="5" y="120" width="200" height="30" mode="Opaque"/>
+                    <text><![CDATA[TIN:]]></text>
+                </staticText>
+                <textField>
+                    <reportElement x="205" y="120" width="350" height="30"/>
+                    <textFieldExpression><![CDATA[$P{TIN}]]></textFieldExpression>
+                </textField>
+
+                <line>
+                    <reportElement x="0" y="150" width="555" height="1" forecolor="#000000"/>
+                </line>
+
+                <staticText>
+                    <reportElement x="5" y="160" width="200" height="30" mode="Opaque"/>
+                    <text><![CDATA[Registered Email:]]></text>
+                </staticText>
+                <textField>
+                    <reportElement x="205" y="160" width="350" height="30"/>
+                    <textFieldExpression><![CDATA[$P{RegisteredEmail}]]></textFieldExpression>
+                </textField>
+
+                <line>
+                    <reportElement x="0" y="190" width="555" height="1" forecolor="#000000"/>
+                </line>
+
+                <staticText>
+                    <reportElement x="5" y="200" width="200" height="30" mode="Opaque"/>
+                    <text><![CDATA[Branch Name:]]></text>
+                </staticText>
+                <textField>
+                    <reportElement x="205" y="200" width="350" height="30"/>
+                    <textFieldExpression><![CDATA[$P{BranchName}]]></textFieldExpression>
+                </textField>
+
+                <line>
+                    <reportElement x="0" y="230" width="555" height="1" forecolor="#000000"/>
+                </line>
+
+                <staticText>
+                    <reportElement x="5" y="240" width="200" height="30" mode="Opaque"/>
+                    <text><![CDATA[Branch Code:]]></text>
+                </staticText>
+                <textField>
+                    <reportElement x="205" y="240" width="350" height="30"/>
+                    <textFieldExpression><![CDATA[$P{BranchCode}]]></textFieldExpression>
+                </textField>
+
+                <line>
+                    <reportElement x="0" y="270" width="555" height="1" forecolor="#000000"/>
+                </line>
+
+                <staticText>
+                    <reportElement x="5" y="280" width="200" height="30" mode="Opaque"/>
+                    <text><![CDATA[Branch Phone Nos:]]></text>
+                </staticText>
+                <textField>
+                    <reportElement x="205" y="280" width="350" height="30"/>
+                    <textFieldExpression><![CDATA[$P{BranchPhoneNos}]]></textFieldExpression>
+                </textField>
+
+                <line>
+                    <reportElement x="0" y="310" width="555" height="1" forecolor="#000000"/>
+                </line>
+
+                <staticText>
+                    <reportElement x="5" y="320" width="200" height="30" mode="Opaque"/>
+                    <text><![CDATA[Branch Email:]]></text>
+                </staticText>
+                <textField>
+                    <reportElement x="205" y="320" width="350" height="30"/>
+                    <textFieldExpression><![CDATA[$P{BranchEmail}]]></textFieldExpression>
+                </textField>
+
+                <line>
+                    <reportElement x="0" y="350" width="555" height="1" forecolor="#000000"/>
+                </line>
+
+                <staticText>
+                    <reportElement x="5" y="360" width="200" height="30" mode="Opaque"/>
+                    <text><![CDATA[Branch Timings:]]></text>
+                </staticText>
+                <textField>
+                    <reportElement x="205" y="360" width="350" height="30"/>
+                    <textFieldExpression><![CDATA[$P{BranchTimings}]]></textFieldExpression>
+                </textField>
+
+                <line>
+                    <reportElement x="0" y="390" width="555" height="1" forecolor="#000000"/>
+                </line>
+
+                <staticText>
+                    <reportElement x="5" y="400" width="200" height="30" mode="Opaque"/>
+                    <text><![CDATA[Mobile:]]></text>
+                </staticText>
+                <textField>
+                    <reportElement x="205" y="400" width="350" height="30"/>
+                    <textFieldExpression><![CDATA[$P{Mobile}]]></textFieldExpression>
+                </textField>
+
+                <line>
+                    <reportElement x="0" y="430" width="555" height="1" forecolor="#000000"/>
+                </line>
+
+                <staticText>
+                    <reportElement x="5" y="440" width="200" height="30" mode="Opaque"/>
+                    <text><![CDATA[Landline:]]></text>
+                </staticText>
+                <textField>
+                    <reportElement x="205" y="440" width="350" height="30"/>
+                    <textFieldExpression><![CDATA[$P{Landline}]]></textFieldExpression>
+                </textField>
+
+                <line>
+                    <reportElement x="0" y="470" width="555" height="1" forecolor="#000000"/>
+                </line>
+
+                <staticText>
+                    <reportElement x="5" y="480" width="200" height="30" mode="Opaque"/>
+                    <text><![CDATA[Toll-Free:]]></text>
+                </staticText>
+                <textField>
+                    <reportElement x="205" y="480" width="350" height="30"/>
+                    <textFieldExpression><![CDATA[$P{TollFree}]]></textFieldExpression>
+                </textField>
+
+                <line>
+                    <reportElement x="0" y="510" width="555" height="1" forecolor="#000000"/>
+                </line>
+
+                <staticText>
+                    <reportElement x="5" y="520" width="200" height="30" mode="Opaque"/>
+                    <text><![CDATA[Paid Line:]]></text>
+                </staticText>
+                <textField>
+                    <reportElement x="205" y="520" width="350" height="30"/>
+                    <textFieldExpression><![CDATA[$P{PaidLine}]]></textFieldExpression>
+                </textField>
+
+                <line>
+                    <reportElement x="0" y="550" width="555" height="1" forecolor="#000000"/>
+                </line>
+
+                <staticText>
+                    <reportElement x="5" y="560" width="200" height="30" mode="Opaque"/>
+                    <text><![CDATA[Customer Care Email:]]></text>
+                </staticText>
+                <textField>
+                    <reportElement x="205" y="560" width="350" height="30"/>
+                    <textFieldExpression><![CDATA[$P{CustCareEmail}]]></textFieldExpression>
+                </textField>
+            </frame>
+        </band>
+    </detail>
+
+    <summary>
+        <band height="40" splitType="Stretch">
+            <textField>
+                <reportElement x="0" y="0" width="555" height="20"/>
+                <textFieldExpression><![CDATA["Disclaimer: The information contained in this electronic message is intended for the exclusive use of the addressee(s)"]]></textFieldExpression>
+            </textField>
+        </band>
+    </summary>
+
+</jasperReport>

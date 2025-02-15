@@ -1,0 +1,86 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /generate-doc
+
+spring:
+  cloud:
+    function:
+      definition: consumer
+    stream:
+      kafka:
+        bindings:
+          consumer-in-0:
+            consumer:
+              destination-is-pattern: true
+              configuration:
+                value.deserializer: io.confluent.kafka.serializers.KafkaAvroDeserializer
+                schema.registry.url: ${SCHEMA_REGISTRY_URL} # Set in environment variables
+        binder:
+          brokers: ${KAFKA_BROKERS} # Set in environment variables
+
+      bindings:
+        consumer-in-0:
+          destination: ${KAFKA_TOPIC} # Set in environment variables
+          group: ${KAFKA_CONSUMER_GROUP} # Set in environment variables
+
+  application:
+    name: Sparc-Generate-Document
+
+  datasource:
+    url: ${DATABASE_URL} # e.g., jdbc:sqlserver://your-db-host:1433;databaseName=YourDB
+    username: ${DATABASE_USERNAME}
+    password: ${DATABASE_PASSWORD}
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+
+topic:
+  regex: "sparc.process.GenerateDoc"
+
+file:
+  upload:
+    path: ${FILE_UPLOAD_PATH} # e.g., /app/templates/
+  destination:
+    path: ${FILE_DESTINATION_PATH} # e.g., /app/output/
+
+db:
+  service:
+    url: ${DB_SERVICE_URL}
+
+image:
+  service:
+    url: ${IMAGE_SERVICE_URL}
+
+default:
+  db:
+    connection: ${DEFAULT_DB_CONNECTION}
+
+post-process:
+  sp:
+    id: ${POST_PROCESS_SP_ID}
+
+smtp:
+  auth: true
+  starttls: true
+  host: smtp.gmail.com
+  port: 587
+  username: ${SMTP_USERNAME}
+  password: ${SMTP_PASSWORD}
+
+token:
+  pin: ${TOKEN_PIN}
+  key:
+    alias: ${TOKEN_ALIAS}
+
+pkcs11:
+  library:
+    path: ${PKCS11_LIBRARY_PATH}
+
+sign:
+  type: ${SIGN_TYPE} # "soft" or "hard"
+
+pdf:
+  sign:
+    keystorePath: ${KEYSTORE_PATH}
+    keystorePassword: ${KEYSTORE_PASSWORD}
+    alias: ${KEYSTORE_ALIAS}
+    certPassword: ${CERT_PASSWORD}

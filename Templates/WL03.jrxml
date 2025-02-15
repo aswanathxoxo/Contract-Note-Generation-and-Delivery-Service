@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.19.1.final using JasperReports Library version 6.19.1-867c00bf88cd4d784d404379d6c05e1b419e8a4c  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="GeojitCustomerCare" pageWidth="595" pageHeight="860" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="21aeafce-52bc-408e-871c-668f5c1b7a2a">
+	<parameter name="PIN" class="java.lang.String"/>
+	<parameter name="Password" class="java.lang.String"/>
+	<detail>
+		<band height="400">
+			<textField>
+				<reportElement x="0" y="123" width="555" height="20" uuid="17122ae7-4772-4697-a0df-11b4b96141dd"/>
+				<textFieldExpression><![CDATA["Welcome to Geojit Customer Care,"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="153" width="555" height="50" uuid="aa5b4535-2038-42fc-bf34-46d81d7d82e2"/>
+				<textFieldExpression><![CDATA["Geojit's Customer Care Center is equipped to provide phone trading services, market related queries, account information, product information and more. The Customer Care Center is manned by a team of professional staff specialized for performing such tasks.The services are available from 8:30 a.m. to 5:30 p.m. on weekdays and from 10:00 a.m. to 01:00 p.m. on Saturdays."]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="203" width="555" height="40" uuid="4d65e4d9-5482-423e-a260-a64f0df08e8a"/>
+				<textFieldExpression><![CDATA["You may reach Geojit's Customer Care Center at 1800-425-5501 / 1800-103-5501 (toll-free) or 0484 3911777. It is essential to enter your TIN (Telephone Identification Number) and PIN (Personal Identification Number), which is, as given below to access your trading account related information:"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="253" width="555" height="15" uuid="6db8d5e0-f636-42e8-a97b-dcfd9938ca70"/>
+				<text><![CDATA[PIN is: ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="33" y="253" width="505" height="15" uuid="4cb8b930-cb01-4744-b04f-1b2437848279"/>
+				<textFieldExpression><![CDATA[$P{PIN}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="273" width="555" height="15" uuid="70452f6d-96db-48f3-8b8b-03b4600b1e3c"/>
+				<text><![CDATA[Password is: ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="61" y="273" width="485" height="15" uuid="2e50f158-3263-4060-9481-9a66643090c8"/>
+				<textFieldExpression><![CDATA[$P{Password}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="306" width="555" height="20" uuid="b1abcd51-91f6-4d23-828c-a48b71043cff"/>
+				<textFieldExpression><![CDATA["Assuring you the best of services,"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="326" width="555" height="20" uuid="b97135e9-746d-4b52-a54e-35c3f08afa81"/>
+				<textFieldExpression><![CDATA["Warm Regards,"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="346" width="555" height="20" uuid="03160d83-a78e-477f-8670-231b0349ba53"/>
+				<textFieldExpression><![CDATA["Geojit Customer Care Center"]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>
